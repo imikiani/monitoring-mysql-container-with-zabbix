@@ -77,7 +77,7 @@ services:
    - net.core.somaxconn=65535
 
  zabbix-agent:
-  build: ./docker-files/zabbix-agent/
+  image: imikiani/zabbix-agent:mysql-monitor
   ports:
    - "10050:10050"
   volumes:
