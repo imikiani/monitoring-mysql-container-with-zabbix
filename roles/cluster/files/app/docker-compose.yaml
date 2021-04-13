@@ -16,8 +16,8 @@ services:
       cpus: '0.70'
       memory: 1G
   env_file:
-   - .env_db_mysql
-   - .env_srv
+   - ./env/.env_db_mysql
+   - ./env/.env_srv
   secrets:
    - MYSQL_USER
    - MYSQL_PASSWORD
@@ -51,8 +51,8 @@ services:
       cpus: '0.70'
       memory: 512M
   env_file:
-   - .env_db_mysql
-   - .env_web
+   - ./env/.env_db_mysql
+   - ./env/.env_web
   secrets:
    - MYSQL_USER
    - MYSQL_PASSWORD
@@ -89,7 +89,7 @@ services:
       memory: 128M
    mode: global
   env_file:
-   - .env_agent
+   - ./env/.env_agent
   privileged: true
   pid: "host"
   networks:
@@ -112,7 +112,7 @@ services:
   volumes:
    - ./zbx_env/var/lib/mysql:/var/lib/mysql:rw
   env_file:
-   - .env_db_mysql
+   - ./env/.env_db_mysql
   secrets:
    - MYSQL_USER
    - MYSQL_PASSWORD
@@ -153,4 +153,4 @@ secrets:
     file: ./secrets/.MYSQL_PASSWORD
   MYSQL_ROOT_PASSWORD:
     file: ./secrets/.MYSQL_ROOT_PASSWORD
-    
+
