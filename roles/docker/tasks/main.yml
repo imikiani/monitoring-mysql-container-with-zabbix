@@ -1,2 +1,1 @@
 # - include_tasks: setup-docker.yml
-- include_tasks: deploy-zabbix.yml
