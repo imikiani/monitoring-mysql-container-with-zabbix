@@ -1,0 +1,14 @@
+---
+- name : Copy zabbix's docker-compose files 
+  copy:
+    src: app
+    dest: /tmp
+
+- name : Copy update-interface.sh
+  copy:
+    src: app/update-interface.sh
+    dest: /home/vagrant  
+    mode: 'u+x,g+x' 
+
+- name: "Deploy"
+  command: "docker-compose -f /tmp/app/docker-compose.yaml up -d"
