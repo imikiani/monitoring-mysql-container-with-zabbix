@@ -148,8 +148,9 @@ networks:
 
 secrets:
   MYSQL_USER:
-    file: ./.MYSQL_USER
+    file: ./secrets/.MYSQL_USER
   MYSQL_PASSWORD:
-    file: ./.MYSQL_PASSWORD
+    file: ./secrets/.MYSQL_PASSWORD
   MYSQL_ROOT_PASSWORD:
-    file: ./.MYSQL_ROOT_PASSWORD
+    file: ./secrets/.MYSQL_ROOT_PASSWORD
+    
