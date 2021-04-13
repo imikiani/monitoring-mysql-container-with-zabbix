@@ -1,10 +1,10 @@
 #/bin/sh
 
-MYSQL_USER=zabbix  # Variable reference, this will be when we start to bring relevant parameters
+MYSQL_USER=${MYSQL_USER}  # Variable reference, this will be when we start to bring relevant parameters
 
-MYSQL_PWD=zabbix
+MYSQL_PWD=${MYSQL_PASSWORD}
 
-MYSQL_HOST=mysql-server
+MYSQL_HOST=${DB_SERVER_HOST}
 
 MYSQL_PORT='3306'
 

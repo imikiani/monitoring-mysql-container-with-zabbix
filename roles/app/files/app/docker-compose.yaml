@@ -90,6 +90,7 @@ services:
    mode: global
   env_file:
    - ./env/.env_agent
+   - ./env/.env_db_mysql
   privileged: true
   pid: "host"
   networks:
