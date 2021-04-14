@@ -37,8 +37,8 @@ User name: `Admin`
 Password : `zabbix`
 
 
-### Update zabbix agent interface
-After the Zabbix is fully installed and you can log in, you need to update the interface for zabbix agent so that zabbix server can communicate with zabbix agent. To do this, just run the script `update-interface.sh`.
+### Update Zabbix server interface
+After the Zabbix is fully installed and you can log in, you need to update the interface for `Zabbix server` host so that zabbix server can communicate with zabbix agent. To do this, just run the script `update-interface.sh`.
 
 Log in to your car for this purpose:
 `vagrant ssh node1`
@@ -58,7 +58,7 @@ Go to `roles/app/files/app/` and run the `update-interface.sh` script from there
 
 
 
-Now with the image below, you can create the following items in the `Zabbix server` host configuration and have the parameters sent by the zabbix agent in your monitoring system.
+Now you can create the following items in the `Zabbix server` host configuration and have the parameters sent by the zabbix agent in your monitoring system.
 
 Keys you can add: 
 
