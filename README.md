@@ -21,10 +21,19 @@ As you can see in the figure, we developed the zabbix agent container and instal
 Meanwhile, in the zabbix agent configuration, we created some User Parameters so that mysqladmin would call from the Mysql Client package and read the parameters from the database container to us. When these parameters are read, for example, once every minute, the zabbix agent picks them up and sends them to the zabbix server.
 
 
-#### Up and running zabix monitoring:
+#### Up and running zabbix monitoring:
 
 You just need to have vagrant and ansible. But if you have Docker and Docker Compose installed on your system, you can clone the project and go to the directory.
 `roles/app/files/app/` and run Docker Compose from there.
 
 But the method that is suggested and we will explain it here is that after you clone the project, only run `vagrant up`. 
 
+
+
+After running `vagrant up`, a virtual machine with IP `192.168.40.100` will be created and Docker and Docker Compos will be installed on it and finally Zabbix application will be deployed on it. Wait a while for these steps to be done. After that, you have access to the Zabbix monitoring tool and you can log in to it. The process of importing data into the database may take some time, waiting for the database to be fully configured. After that, you have access to Zabbix through the mentioned IP and you can log in with the default username and password:
+
+User name: `Admin`
+
+Password : `zabbix`
+
+### 
