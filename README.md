@@ -15,3 +15,7 @@ So what to do? UserParameters solves the problem in zabbix agent. How?
 
 
 ![alt text](https://github.com/imikiani/monitoring-mysql-container-with-zabbix/blob/main/roles/app/files/app/schema.jpeg?raw=true)
+
+As you can see in the figure, we developed the zabbix agent container and installed a tool on it (neither a service nor a process). This tool is a simple and compact Myql Client. The docker file for this dedicated container is placed in the`docker-images` directory and also in the docker hub to be puuled from the docker hub when deploying Docker Compos services.
+
+Meanwhile, in the zabbix agent configuration, we created some User Parameters so that mysqladmin would call from the Mysql Client package and read the parameters from the database container to us. When these parameters are read, for example, once every minute, the zabbix agent picks them up and sends them to the zabbix server.
