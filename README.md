@@ -19,3 +19,12 @@ So what to do? UserParameters solves the problem in zabbix agent. How?
 As you can see in the figure, we developed the zabbix agent container and installed a tool on it (neither a service nor a process). This tool is a simple and compact Myql Client. The docker file for this dedicated container is placed in the`docker-images` directory and also in the docker hub to be puuled from the docker hub when deploying Docker Compos services.
 
 Meanwhile, in the zabbix agent configuration, we created some User Parameters so that mysqladmin would call from the Mysql Client package and read the parameters from the database container to us. When these parameters are read, for example, once every minute, the zabbix agent picks them up and sends them to the zabbix server.
+
+
+#### Up and running zabix monitoring:
+
+You just need to have vagrant and ansible. But if you have Docker and Docker Compose installed on your system, you can clone the project and go to the directory.
+`roles/app/files/app/` and run Docker Compose from there.
+
+But the method that is suggested and we will explain it here is that after you clone the project, only run `vagrant up`. 
+
