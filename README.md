@@ -1,4 +1,4 @@
-### Monitoring Mysql Container with Zabbix
+## Monitoring Mysql Container with Zabbix
 
 This repository launches a Zabix monitoring application using Docker Compose. 
 
@@ -21,7 +21,7 @@ As you can see in the figure, we developed the zabbix agent container and instal
 Meanwhile, in the zabbix agent configuration, we created some User Parameters so that mysqladmin would call from the Mysql Client package and read the parameters from the database container to us. When these parameters are read, for example, once every minute, the zabbix agent picks them up and sends them to the zabbix server.
 
 
-#### Up and running zabbix monitoring:
+### Up and running zabbix monitoring:
 
 You just need to have vagrant and ansible. But if you have Docker and Docker Compose installed on your system, you can clone the project and go to the directory.
 `roles/app/files/app/` and run Docker Compose from there.
