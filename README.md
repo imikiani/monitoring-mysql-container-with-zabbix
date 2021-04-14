@@ -36,4 +36,19 @@ User name: `Admin`
 
 Password : `zabbix`
 
-### 
+
+### Update zabbix agent interface
+After the Zabbix is fully installed and you can log in, you need to update the interface for zabbix agent so that zabbix server can communicate with zabbix agent. To do this, just run the script `update-interface.sh`.
+
+Log in to your car for this purpose:
+`vagrant ssh node1`
+
+Then go to the `/home/vagrant` directory of your machine and run the script.
+
+```
+sudo su
+
+cd /home/vagrant
+
+./update-interface.sh
+```
