@@ -61,6 +61,7 @@ Go to `roles/app/files/app/` and run the `update-interface.sh` script from there
 Now with the image below, you can create the following items in the `Zabbix server` host configuration and have the parameters sent by the zabbix agent in your monitoring system.
 
 Keys you can add: 
+
 `mysql.ping`
 
 `mysql.status[Uptime]`
