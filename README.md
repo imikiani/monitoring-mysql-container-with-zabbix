@@ -52,3 +52,6 @@ cd /home/vagrant
 
 ./update-interface.sh
 ```
+
+(Or if you have installed Docker on your own system and do not use vagrant,
+Go to `roles/app/files/app/` and run the `update-interface.sh` script from there.) 
